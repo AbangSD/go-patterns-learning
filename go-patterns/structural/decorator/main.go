@@ -6,7 +6,7 @@ import (
 
 type Object func(int) int
 
-func LogDecorate(fsource Object, fextend Object) Object {
+func Decorate(fsource Object, fextend Object) Object {
 	return func(n int) int {
 		result := fextend(fsource(n))
 
@@ -23,8 +23,8 @@ func Double(n int) int {
 }
 
 func main() {
-	f1 := LogDecorate(AddOne, Double)
+	f1 := Decorate(AddOne, Double)
 	fmt.Println(f1(5))
-	f2 := LogDecorate(f1, AddOne)
+	f2 := Decorate(f1, AddOne)
 	fmt.Println(f2(5))
 }
