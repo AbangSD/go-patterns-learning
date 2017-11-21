@@ -10,7 +10,6 @@ var (
 	ErrIllegalRelease = errors.New("semaphore: can't release the semaphore without acquiring it first")
 )
 
-// Interface contains the behavior of a semaphore that can be acquired and/or released.
 type Interface interface {
 	Acquire() error
 	Release() error
