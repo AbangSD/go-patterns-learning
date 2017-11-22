@@ -27,8 +27,6 @@ func New() singleton {
 ``` shell
 s1 is {1} s2 is {0}
 s1 is {1} s2 is {2}
-s1 address is 0xc42000c030
-s2 address is 0xc42000c038
 ```
 
 ​	从输出上看，once.Do 并没有保证初始化函数只执行一次。最终，产生了两个 singleton 实例。那正确的做法是怎么样的呢？
@@ -56,12 +54,11 @@ func New() *singleton {
 ​	再一起运行一下示例 singleton2，可以看到输出结果如下。
 
 ``` shell
-// s1 is &{1} s2 is &{1}
-// s1 is &{2} s2 is &{2}
-// s1 address is 0xc42000c040
-// s2 address is 0xc42000c048
+s1 is &{1} s2 is &{1}
+s1 is &{2} s2 is &{2}
+&s1.N == &s2.N ? true
 ```
 
-​	虽然 s1 和 s2 的地址不一样，但是他们都指向了 instance。此时，实现了单例模式。
+​	s1.N 和 s2.N 的地址相同表明 s1 和 s2 都指向了 instance。此时，实现了单例模式。
 
 ​	singleton3 是 map 的单例模式示例。
