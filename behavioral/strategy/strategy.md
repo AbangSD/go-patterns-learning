@@ -1,4 +1,4 @@
-# Strategy
+# Strategy Pattern
 
 ​	策略模式只是定义了一个宏观的规则，内部具体算法可能各不相同。
 

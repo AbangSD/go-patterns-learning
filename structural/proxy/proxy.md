@@ -1,4 +1,4 @@
-# Proxy
+# Proxy Pattern
 
 引用维基百科：
 

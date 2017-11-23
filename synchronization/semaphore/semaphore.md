@@ -1,4 +1,4 @@
-# Semaphore
+# Semaphore Pattern
 
 semaphore/semaphore.go
 

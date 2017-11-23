@@ -1,4 +1,4 @@
-# Factory
+# Factory Pattern
 
 ``` go
 func NewObj(t Type) Obj {

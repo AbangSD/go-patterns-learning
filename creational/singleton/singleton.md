@@ -1,4 +1,4 @@
-# Singleton
+# Singleton Pattern
 
 ``` go
 type singleton struct {

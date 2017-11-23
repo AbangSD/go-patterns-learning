@@ -1,4 +1,4 @@
-package bounded_parallelism
+package main
 
 import (
 	"crypto/md5"

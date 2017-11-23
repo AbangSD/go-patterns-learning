@@ -1,4 +1,4 @@
-# Builder
+# Builder Pattern
 
 ``` go
 type Builder interface {

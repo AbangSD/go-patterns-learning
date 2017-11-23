@@ -1,4 +1,4 @@
-# Decorator
+# Decorator Pattern
 
 ​	Decorator 模式，我们借助代码来理解。
 
