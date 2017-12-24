@@ -19,4 +19,5 @@ func main() {
 
 	fmt.Println("s1 is", s1, "s2 is", s2)
 	fmt.Println("&s1.N == &s2.N ?", &s1.N == &s2.N)
+	fmt.Println("&s1 == &s2 ?", &s1 == &s2)
 }

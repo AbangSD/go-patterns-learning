@@ -3,50 +3,54 @@ package main
 import (
 	"fmt"
 
-	"./car"
+	"./builder"
 )
 
 type Car struct {
-	color  car.Color
-	speed  car.Speed
-	wheels car.Wheels
+	brand builder.Brand
+	color builder.Color
+	size  builder.Size
 }
 
-func (c Car) Paint(color car.Color) Car {
+func (c *Car) Brand(brand builder.Brand) *Car {
+	c.brand = brand
+	return c
+}
+
+func (c *Car) Color(color builder.Color) *Car {
 	c.color = color
 	return c
 }
 
-func (c Car) TopSpeed(speed car.Speed) Car {
-	c.speed = speed
+func (c *Car) Size(size builder.Size) *Car {
+	c.size = size
 	return c
 }
 
-func (c Car) Wheels(wheels car.Wheels) Car {
-	c.wheels = wheels
+func (c *Car) Build() builder.Product {
 	return c
 }
 
-func (c Car) Build() car.Interface {
-	return c
-}
-
-func (c Car) Drive() error {
-	fmt.Println(c.color, c.speed, c.wheels, "car drive")
+func (c *Car) Drive() error {
+	fmt.Printf("A %s %s %s car is driving.\n", c.size, c.color, c.brand)
 	return nil
 }
 
-func (c Car) Stop() error {
-	fmt.Println(c.color, c.speed, c.wheels, "car stop")
+func (c *Car) Stop() error {
+	fmt.Printf("A %s %s %s car is stopped.\n", c.size, c.color, c.brand)
 	return nil
 }
 
 func main() {
-	assembly := Car{}.Paint(car.RedColor)
+	var c = new(Car)
 
-	familyCar := assembly.Wheels(car.SportsWheels).TopSpeed(50 * car.MPH).Build()
-	familyCar.Drive()
+	c.Brand(builder.BMW).Color(builder.Green).Size(builder.Big)
+	bmw := c.Build()
+	bmw.Drive()
+	bmw.Stop()
 
-	sportsCar := assembly.Wheels(car.SteelWheels).TopSpeed(150 * car.MPH).Build()
-	sportsCar.Stop()
+	c.Brand(builder.MB).Color(builder.Red).Size(builder.Small)
+	mb := c.Build()
+	mb.Drive()
+	mb.Stop()
 }
