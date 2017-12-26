@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"./strategy"
+	"github.com/AbangSD/go-patterns-learning/behavioral/strategy/strategy"
 )
 
 type Addition struct{}

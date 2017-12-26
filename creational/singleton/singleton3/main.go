@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"./singleton"
+	"github.com/AbangSD/go-patterns-learning/creational/singleton/singleton3/singleton"
 )
 
 func main() {

@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"./semaphore"
+	"github.com/AbangSD/go-patterns-learning/synchronization/semaphore/semaphore"
 )
 
 func main() {

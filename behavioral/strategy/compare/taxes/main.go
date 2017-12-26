@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"./taxes"
+	"github.com/AbangSD/go-patterns-learning/behavioral/strategy/compare/taxes/taxes"
 )
 
 type Chinese struct {

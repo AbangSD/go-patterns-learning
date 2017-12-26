@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"./file"
+	"github.com/AbangSD/go-patterns-learning/idiom/functional_options/file"
 )
 
 func main() {

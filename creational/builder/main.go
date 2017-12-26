@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"./builder"
+	"github.com/AbangSD/go-patterns-learning/creational/builder/builder"
 )
 
 type Car struct {

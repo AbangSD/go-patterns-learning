@@ -2,9 +2,27 @@
 
 策略模式只是定义了一个宏观的规则，内部具体算法可能各不相同。
 
-注意：要保证 Operator 接口中的方法与 Operation 带有的方法一致。
+``` go
+package strategy
 
-## 策略模式 与 修饰者模式
+type Operator interface {
+	Apply(int, int) int
+}
+
+type Operation struct {
+	Operator Operator
+}
+
+func (o *Operation) Operate(leftValue, rightValue int) int {
+	return o.Operator.Apply(leftValue, rightValue)
+}
+```
+
+策略模式只是设计了一个包含一系列方法的接口。具体实现的方法是写一个带多个方法的接口和一个只包含此接口的抽象结构类型，接口中的每一个方法都为抽象结构添加相应的实现，其实现方法是调用接口带有的相应的方法。具体使用时，创建一个具体结构类型然后让它实现此接口，创建的具体结构实例可以给抽象结构赋值，若此时有多个具体结构类型，他们可以通过转换成抽象结构实现统一。
+
+注意：要保证 Operator 接口中的方法与 Operation 结构带有的方法一致。
+
+## 修饰者模式 与 策略模式
 
 借用《head first 设计模式》中卖咖啡的修饰模式例子与维基百科中收税的策略模式例子对比一下。
 

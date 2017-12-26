@@ -31,3 +31,5 @@ func Double(n int) int {
 ```
 
 这里定义了两个方法，一个是加一，一个是乘二。如果现在我又需要一个先加一再乘二的函数，就可以用 f1 := Decorate(AddOne, Double) 得到了。同理，需要加一再乘二最后还加一就可以用 f2 := Decorate(f1, AddOne) 这样的方法得到。
+
+##### 注意：修饰者模式 与 策略模式 的对比，详见 [startegy.md](../../behavioral/strategy/strategy.md)

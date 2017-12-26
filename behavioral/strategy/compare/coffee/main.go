@@ -2,9 +2,8 @@ package main
 
 import (
 	"fmt"
-	"go-patterns-learning/go-patterns/behavioral/strategy/compare/coffee/coffee"
 
-	"./coffee"
+	"github.com/AbangSD/go-patterns-learning/behavioral/strategy/compare/coffee/coffee"
 )
 
 func NormalCoffee(cs coffee.Coffee) coffee.Coffee {

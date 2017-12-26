@@ -1,0 +1,13 @@
+package: AbangSD/go-patterns-learning
+import:
+- package: github.com/AbangSD/go-patterns-learning
+  subpackages:
+  - behavioral/strategy/compare/coffee/coffee
+  - behavioral/strategy/compare/taxes/taxes
+  - behavioral/strategy/strategy
+  - creational/builder/builder
+  - creational/singleton/singleton1/singleton
+  - creational/singleton/singleton2/singleton
+  - creational/singleton/singleton3/singleton
+  - idiom/functional_options/file
+  - synchronization/semaphore/semaphore

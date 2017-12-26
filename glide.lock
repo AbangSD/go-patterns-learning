@@ -1,0 +1,16 @@
+hash: 483793c33ad82dbd11a4912b4b9edff79c5f6b64624b275a19431a7bbd90752a
+updated: 2017-12-26T11:10:39.834713+08:00
+imports:
+- name: github.com/AbangSD/go-patterns-learning
+  version: e4c5d3678aca730527d91d95cab419dea953e84a
+  subpackages:
+  - behavioral/strategy/compare/coffee/coffee
+  - behavioral/strategy/compare/taxes/taxes
+  - behavioral/strategy/strategy
+  - creational/builder/builder
+  - creational/singleton/singleton1/singleton
+  - creational/singleton/singleton2/singleton
+  - creational/singleton/singleton3/singleton
+  - idiom/functional_options/file
+  - synchronization/semaphore/semaphore
+testImports: []
